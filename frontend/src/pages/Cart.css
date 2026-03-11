@@ -1,0 +1,237 @@
+.cart-page {
+    padding: 2rem 0;
+}
+
+.cart-empty {
+    flex-direction: column;
+    min-height: 50vh;
+    gap: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .cart-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.cart-items-list {
+    flex: 1;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    padding: 4px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.quantity-controls.in-cart {
+    background-color: var(--primary);
+}
+
+.cart-item-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 60px;
+    text-align: right;
+}
+
+/* Summary Card */
+.cart-summary {
+    width: 100%;
+    padding: 1.5rem;
+    position: sticky;
+    top: 100px;
+}
+
+@media (min-width: 900px) {
+    .cart-summary {
+        width: 350px;
+    }
+}
+
+.flex-col-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-section {
+    padding: 1.25rem;
+}
+
+.summary-section h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.change-btn {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.address-preview {
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.addr-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.address-preview p {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payment-item:hover {
+    border-color: var(--primary);
+}
+
+.payment-item.active {
+    border-color: var(--primary);
+    background: #f0fdf4;
+}
+
+.radio-circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    margin-left: auto;
+    position: relative;
+}
+
+.payment-item.active .radio-circle {
+    border-color: var(--primary);
+}
+
+.payment-item.active .radio-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.bill-details {
+    padding: 1.5rem;
+}
+
+.bill-details h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.bill-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.checkout-action {
+    margin-top: 1.5rem;
+}

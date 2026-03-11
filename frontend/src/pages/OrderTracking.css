@@ -1,0 +1,187 @@
+.tracking-page {
+    padding: 2rem 0;
+}
+
+.tracking-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .tracking-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.tracking-status-section {
+    flex: 1.5;
+    padding: 1.5rem;
+}
+
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.status-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.status-badge {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.tracking-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tracking-steps::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: var(--border);
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+.step.visited .step-icon {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.step.active .step-icon {
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(12, 131, 31, 0.1);
+}
+
+.step-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-text strong {
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.step-text span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.delivery-partner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--surface-hover);
+}
+
+.partner-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.partner-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.partner-info .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.call-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+}
+
+/* Order Summary section */
+.order-summary-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.delivery-address,
+.order-items {
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.items-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.summary-total {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,175 @@
+.home-container {
+    padding-bottom: 4rem;
+}
+
+/* Hero Banner matching screenshot */
+.hero-banner {
+    background: linear-gradient(90deg, #218319 0%, #87bc41 100%);
+    border-radius: 20px;
+    padding: 3.5rem 4.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+    color: white;
+    min-height: 240px;
+}
+
+.hero-content {
+    max-width: 55%;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    opacity: 1;
+    line-height: 1.3;
+    max-width: 90%;
+}
+
+.btn-shop-now {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    right: 0;
+    bottom: -18%;
+    width: 42%;
+    height: 105%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-image-overlay img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Promo Grid from Screenshot */
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.promo-tile {
+    border-radius: 20px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.promo-tile.pharmacy {
+    background-color: #00b5b7;
+}
+
+.promo-tile.pet-care {
+    background-color: #ffc233;
+}
+
+.promo-tile.baby-care {
+    background-color: #e6f3ff;
+}
+
+.promo-tile.baby-care .promo-title,
+.promo-tile.baby-care .promo-desc {
+    color: #1a1a1a;
+}
+
+.promo-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+    color: white;
+}
+
+.promo-desc {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: auto;
+    max-width: 80%;
+}
+
+.btn-order-now {
+    background-color: white;
+    color: #1a1a1a;
+    padding: 0.45rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.promo-tile.baby-care .btn-order-now {
+    background-color: #222;
+    color: white;
+}
+
+.promo-image-sidebar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 65%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.promo-image-sidebar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.see-all-link {
+    color: #0c831f;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+}

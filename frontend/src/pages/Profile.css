@@ -1,0 +1,327 @@
+.profile-page {
+    padding: 2rem 0;
+}
+
+.profile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .profile-layout {
+        flex-direction: row;
+    }
+}
+
+/* Sidebar */
+.profile-sidebar {
+    width: 100%;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+@media (min-width: 900px) {
+    .profile-sidebar {
+        width: 300px;
+        position: sticky;
+        top: 100px;
+    }
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.user-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.profile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.nav-item:hover {
+    background-color: var(--surface-hover);
+    color: var(--text-main);
+}
+
+.nav-item.active {
+    background-color: var(--red-light);
+    color: var(--red-alert);
+}
+
+.nav-item.logout {
+    margin-top: 1rem;
+    color: var(--red-alert);
+}
+
+.nav-item.logout:hover {
+    background-color: var(--red-light);
+}
+
+/* Main Content */
+.profile-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-section {
+    padding: 1.5rem;
+}
+
+.address-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .address-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.add-address-card {
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.add-address-card:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: rgba(12, 131, 31, 0.02);
+}
+
+.address-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.address-form {
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.address-form h3 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+.form-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-header h3 {
+    margin-bottom: 0 !important;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1;
+}
+
+.title-options {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.title-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.title-btn.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+.address-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    transition: box-shadow 0.2s;
+}
+
+.address-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.address-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.address-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.address-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.settings-grid {
+    max-width: 500px;
+}
+
+.input-field {
+    margin-bottom: 1.25rem;
+}
+
+.input-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 400px;
+}
+
+.prompt-icon {
+    color: var(--border);
+    margin-bottom: 1.5rem;
+}
+
+.login-prompt h2 {
+    margin-bottom: 0.5rem;
+}
+
+.login-prompt p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
