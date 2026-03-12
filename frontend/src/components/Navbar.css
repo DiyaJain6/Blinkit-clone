@@ -33,14 +33,14 @@
     font-weight: 900;
     /* Extra bold for Blinkit feel */
     letter-spacing: -2px;
-    color: var(--secondary);
-    /* 'blink' is yellow */
+    color: var(--primary);
+    /* 'blink' is green */
     margin-right: 1.5rem;
 }
 
 .logo-highlight {
-    color: var(--primary);
-    /* 'it' is green */
+    color: var(--secondary);
+    /* 'it' is yellow */
 }
 
 .location-picker {
